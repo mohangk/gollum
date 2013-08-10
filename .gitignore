@@ -5,3 +5,5 @@ pkg
 Gemfile.lock
 *.gem
 *.swp
+users.yml
+nohup.out
