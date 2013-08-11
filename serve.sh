@@ -1,6 +1,6 @@
 #!/bin/bash
-# kill any running gollums
-ps -ef | grep rackup | grep -v grep | awk '{print $2}' | xargs kill -9
+# stop any running unicorns
+cat tmp/pids/unicorn.pid | xargs kill -QUIT
 # start gollum as a background process
 # you can pipe output to /dev/null instead, if you don't want a log
-nohup rackup -p 4567 config.ru > ~/logs/gollum.log &
+unicorn -c config/unicorn.rb -D -E production

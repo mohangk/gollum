@@ -7,3 +7,5 @@ Gemfile.lock
 *.swp
 users.yml
 nohup.out
+tmp/*
+log/*
